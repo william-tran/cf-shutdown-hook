@@ -1,0 +1,12 @@
+---
+applications:
+- name: shutdown
+  memory: 512M
+  instances: 1
+  path: target/shutdown.jar
+  buildpack: java_buildpack_offline
+- name: listener-for-shutdown
+  memory: 512M
+  instances: 1
+  path: src/main/resources/static
+  buildpack: staticfile_buildpack
